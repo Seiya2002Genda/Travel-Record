@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Record</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/TravelRecord.css') }}">
+</head>
+
+<body>
+
+<header class="navbar">
+    <h1>Travel Record</h1>
+
+    <nav>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/logout">Logout</a>
+    </nav>
+</header>
+
+<main class="container">
+
+    <!-- ======================
+         CREATE TRAVEL
+    ====================== -->
+    <section class="card">
+
+        <h2>Create Travel</h2>
+
+        <form id="travelForm">
+
+            <input type="text" id="destination" placeholder="Destination" required>
+
+            <input type="date" id="start_date" required>
+            <input type="date" id="end_date" required>
+
+            <input type="text" id="purpose" placeholder="Purpose" required>
+
+            <textarea id="impression" placeholder="Overall Impression"></textarea>
+
+            <input type="number" id="total_cost" placeholder="Total Cost">
+
+            <button type="submit">Save Travel</button>
+
+        </form>
+
+    </section>
+
+    <!-- ======================
+         ADD DAY
+    ====================== -->
+    <section class="card">
+
+        <h2>Add Daily Record</h2>
+
+        <form id="dayForm">
+
+            <input type="date" id="day_date" required>
+
+            <input type="text" id="day_destination" placeholder="Destination" required>
+
+            <textarea id="activities" placeholder="Activities"></textarea>
+
+            <textarea id="day_impression" placeholder="Impression"></textarea>
+
+            <input type="number" id="day_cost" placeholder="Cost">
+
+            <button type="submit">Add Day</button>
+
+        </form>
+
+    </section>
+
+    <!-- ======================
+         DISPLAY
+    ====================== -->
+    <section class="card">
+
+        <h2>Travel Details</h2>
+
+        <div id="travelDetail"></div>
+        <div id="dayList"></div>
+
+    </section>
+
+</main>
+
+<script src="{{ url_for('static', filename='js/TravelRecord.js') }}"></script>
+
+</body>
+</html>

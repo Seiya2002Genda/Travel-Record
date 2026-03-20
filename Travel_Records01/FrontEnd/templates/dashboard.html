@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Travel Records</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+</head>
+
+<body>
+
+<header class="navbar">
+    <h1>Dashboard</h1>
+
+    <nav>
+        <a href="/TravelRecord">New Travel</a>
+        <a href="/logout">Logout</a>
+    </nav>
+</header>
+
+<main class="container">
+
+    <h2>Your Travels</h2>
+
+    <div id="travelList" class="travel-list">
+        <!-- JSでここにデータ入る -->
+    </div>
+
+</main>
+
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+
+</body>
+</html>

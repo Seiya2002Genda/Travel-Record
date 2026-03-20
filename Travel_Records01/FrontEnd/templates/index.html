@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Records</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+
+<body>
+
+<header class="navbar">
+    <h1>Travel Records</h1>
+
+    <nav>
+        <a href="{{ url_for('login') }}">Login</a>
+        <a href="{{ url_for('signup') }}">Sign Up</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Record Your Journey</h2>
+    <p>Track your trips, memories, and experiences day by day.</p>
+
+    <button onclick="goToSignup()">Get Started</button>
+</section>
+
+<section class="features">
+
+    <div class="feature">
+        <h3>📍 Track Destinations</h3>
+        <p>Keep all your travel locations organized.</p>
+    </div>
+
+    <div class="feature">
+        <h3>📅 Daily Logs</h3>
+        <p>Record each day of your journey in detail.</p>
+    </div>
+
+    <div class="feature">
+        <h3>💰 Expense Tracking</h3>
+        <p>Manage your travel budget efficiently.</p>
+    </div>
+
+</section>
+
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+
+</body>
+</html>

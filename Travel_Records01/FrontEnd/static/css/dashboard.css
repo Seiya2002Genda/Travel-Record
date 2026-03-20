@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: #020617;
+}
+
+.navbar a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.container {
+    padding: 40px;
+}
+
+.travel-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.travel-card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+}
+
+.travel-card h3 {
+    margin: 0;
+}
+
+.travel-card button {
+    margin-top: 10px;
+    padding: 8px;
+    background: #1d4ed8;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}

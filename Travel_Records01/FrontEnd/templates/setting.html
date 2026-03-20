@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Settings</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/setting.css') }}">
+</head>
+
+<body>
+
+<header class="navbar">
+    <h1>Settings</h1>
+
+    <nav>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/logout">Logout</a>
+    </nav>
+</header>
+
+<main class="container">
+
+    <!-- ======================
+         ACCOUNT INFO
+    ====================== -->
+    <section class="card">
+        <h2>Account Information</h2>
+
+        <form id="accountForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="text" id="first_name" placeholder="First Name" required>
+            <input type="text" id="last_name" placeholder="Last Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+
+            <button type="submit">Update Account</button>
+        </form>
+    </section>
+
+    <!-- ======================
+         PASSWORD
+    ====================== -->
+    <section class="card">
+        <h2>Change Password</h2>
+
+        <form id="passwordForm">
+            <input type="password" id="new_password" placeholder="New Password" required>
+            <button type="submit">Update Password</button>
+        </form>
+    </section>
+
+    <!-- ======================
+         APP SETTINGS
+    ====================== -->
+    <section class="card">
+        <h2>Application Settings</h2>
+
+        <div id="settingsBox"></div>
+    </section>
+
+    <p id="message"></p>
+
+</main>
+
+<script src="{{ url_for('static', filename='js/setting.js') }}"></script>
+
+</body>
+</html>
